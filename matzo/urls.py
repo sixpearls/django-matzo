@@ -4,5 +4,5 @@ from django.conf.urls.defaults import patterns, url
 
 
 urlpatterns = patterns('',
-    url(r'^$', 'views.index', name='index'),
+    url(regex=r'^(?P<url>.*)$', view=FlatpageView.as_view(), name="FlatPage"),
 )
