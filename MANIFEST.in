@@ -1,0 +1,11 @@
+recursive-include doc_src *
+recursive-include docs *
+
+recursive-include matzo/static *
+recursive-include matzo/templates *
+
+include LICENSE
+include README
+include *.txt
+
+prune example/
