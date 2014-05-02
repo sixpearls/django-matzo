@@ -3,12 +3,12 @@ django-matzo
 
 An app to use ``django-bakery`` with the ``FlatPage`` built-in app. Also compatible with ``django-textify``.
 
-To use:
+To configure:
 
-    0. Add ``matzo`` to your ``INSTALLED_APPS``
-    1. Remove ``django.contrib.flatpages.middleware.FlatpageFallbackMiddleware`` from your ``MIDDLEWARE_CLASSES``
-    2. Add ``matzo.urls.urlpatterns`` to your urls, like so: ::
-        # project urls.py
-        import matzo.urls
+1. Add ``matzo`` to your ``INSTALLED_APPS``
 
-        urlpatterns += matzo.urls.urlpatterns
+2. Remove ``django.contrib.flatpages.middleware.FlatpageFallbackMiddleware`` from your ``MIDDLEWARE_CLASSES``
+
+3. Add ``matzo.urls.urlpatterns`` to your urls, to dynamically view the flatpages without the middleware
+
+4. Add ``matzo.BakedFlatpageView`` to your ``BAKERY_VIEWS``
